@@ -1,0 +1,123 @@
+.login-container{
+    background-image: url("../../assets/byte-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/* global transition */
+*{
+    transition: all 0.3s ease;
+}
+/* font style */
+@font-face {
+    font-family: codec_pro;
+    src: url('assets/fonts/CodecPro-Regular.ttf');
+}
+
+/* logo */
+
+.logo{
+    width: 100px;
+}
+.login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;;
+}
+.login-container .web-logo{
+    height: 100vh;
+    padding: 10px;
+}
+input[type="text"], input[type="password"]{
+    width: 250px;
+}
+.login-container .web-logo .img-wrapper-1 .logo{
+    border-radius: 50%;
+}
+
+/* form */
+.login-container .form-container{
+    backdrop-filter: blur(1px);
+    width: 700px;
+    padding: 10px;
+    height: 70%;
+    box-shadow: 0px 1px 5px 6px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 1px 5px 6px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 1px 5px 6px rgba(0,0,0,0.25);
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.login-container .form-container::-webkit-scrollbar{
+    display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.login-container .form-container form div{
+    width: 300px;
+}
+.login-container .form-container h1{
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4b548b;
+    font-size:70px;
+    text-align: center;
+}
+.login-container .form-container form button{
+    transition: background-image 0.5s ease-in;
+    font-family: "Anton", serif;
+    letter-spacing: 1px;
+    width: 200px;
+    color: rgb(238, 238, 238);  
+    background-image: url('../../assets/byte-background.png');
+}
+.login-container .form-container form button:hover{
+    background-image: url('../../assets/byte-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    body{
+        overflow: hidden;
+    }
+    .login-container{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-container .form-container{
+        width: 100%;
+        padding: 10px;
+        backdrop-filter: blur(0);
+        margin-right: 10px;
+        padding-top: 30px;
+    }
+    .logo{
+        width: 55px;
+    }
+    .login-container .web-logo{
+        height: 190px;
+        width: 100%;
+    }
+    .login-container .form-container h1{
+        font-size:40px;
+
+    }
+    .login-container .form-container form button{
+        width: 190px;
+    }
+    /* .login-container .form-container form .preffered-password .show-hide-btn{
+        right: 30px;
+        bottom: 80px;
+    }
+    @media (max-width: 390px) {
+        right: 30px;
+    } */
+}
